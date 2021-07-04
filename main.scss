@@ -1,0 +1,30 @@
+* {
+
+    margin: 0;
+    background-color: rgb(22, 21, 31);
+}
+
+html {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+h1 {
+
+font-size: 28px;
+color: white;
+font-family: "Roboto";
+animation: appear 2s ease-in-out;
+text-align: center;
+}
+
+@keyframes appear {
+
+    from { opacity: 0;}
+    to { opacity: 1;}
+    
+}
