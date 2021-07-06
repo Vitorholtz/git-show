@@ -28,9 +28,11 @@ body {
 html {
 
     font-family: 'Roboto', sans-serif;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+.text-container {
+
+    max-width: 1080px;
+    margin: auto;
+
 }
