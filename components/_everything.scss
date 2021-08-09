@@ -151,6 +151,86 @@ header {
   color: #ffffff;
 }
 
+//lista
+
+.list-container {
+
+  width: 100%;
+  height: 2000px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+
+  ol {
+
+    li {
+
+      border: 1px gray solid;
+      border-radius: 6px;
+      width: 1080px;
+      padding: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: black;
+      margin: 10px 0;
+
+      .profile {
+
+        height: 50px;
+        width: 50px;
+        background-color: rgb(33, 33, 44);
+        border-radius: 100px;
+      }
+
+      span{
+
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .tooltip{
+
+          width: 18px;
+          height: 18px;
+          border-radius: 50px;
+          margin-right: 20px;
+          background-image: url(/img/tooltip-icon.svg);
+          cursor: pointer;
+          position: relative;
+          transition: .3s;
+
+          &:hover {
+            box-shadow: 0 0 0 2px rgb(255, 255, 255),
+                        0 0 0 4px #FF005F;
+                
+        &::before {
+          content: attr(data-tooltip);
+          position: absolute;
+          transform: translateX(-10%) translateY(-50%);
+          top:50%;
+          left: -290px;
+          width: 300px;
+          padding: 12px;
+          border-radius:6px;
+          color: rgb(48, 48, 48);
+          background-color: white;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          font-weight: lighter;
+          animation: Tooltip .2s linear;
+           }
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes Tooltip {
+  from {opacity: 0; transform: translateX(10%) translateY(-50%);}
+  to {opacity: 1; }
+}
 
 
 .container {

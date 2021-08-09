@@ -208,6 +208,115 @@ header .right-menu ol .content:hover::before {
   color: #ffffff;
 }
 
+.list-container {
+  width: 100%;
+  height: 2000px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px;
+}
+
+.list-container ol li {
+  border: 1px gray solid;
+  border-radius: 6px;
+  width: 1080px;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  margin: 10px 0;
+}
+
+.list-container ol li .profile {
+  height: 50px;
+  width: 50px;
+  background-color: #21212c;
+  border-radius: 100px;
+}
+
+.list-container ol li span {
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.list-container ol li span .tooltip {
+  width: 18px;
+  height: 18px;
+  border-radius: 50px;
+  margin-right: 20px;
+  background-image: url(/img/tooltip-icon.svg);
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.list-container ol li span .tooltip:hover {
+  -webkit-box-shadow: 0 0 0 2px white, 0 0 0 4px #FF005F;
+          box-shadow: 0 0 0 2px white, 0 0 0 4px #FF005F;
+}
+
+.list-container ol li span .tooltip:hover::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  -webkit-transform: translateX(-10%) translateY(-50%);
+          transform: translateX(-10%) translateY(-50%);
+  top: 50%;
+  left: -290px;
+  width: 300px;
+  padding: 12px;
+  border-radius: 6px;
+  color: #303030;
+  background-color: white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-weight: lighter;
+  -webkit-animation: Tooltip .2s linear;
+          animation: Tooltip .2s linear;
+}
+
+@-webkit-keyframes Tooltip {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(10%) translateY(-50%);
+            transform: translateX(10%) translateY(-50%);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes Tooltip {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(10%) translateY(-50%);
+            transform: translateX(10%) translateY(-50%);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
